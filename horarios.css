@@ -1,0 +1,40 @@
+.tabela-container {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+}
+
+table.wire {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+/* O topo da tabela fica fixo enquanto rola os horários */
+table.wire th {
+  position: sticky;
+  top: 0;
+  background: #ececec;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 1;
+  border-bottom: 2px solid #999999;
+}
+
+table.wire th, table.wire td {
+  border: 1px solid #d4d4d4;
+  padding: 10px 8px;
+  text-align: center; 
+}
+
+table.wire tbody tr:nth-child(even) {
+  background: #fdfdfd;
+}
+
+.map-caption {
+  font-size: 0.72rem;
+  color: #6b6b6b;
+  margin-bottom: 16px;
+}

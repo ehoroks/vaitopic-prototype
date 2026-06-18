@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VaiTopic! — Painel do Passageiro (QR Code)</title>
+<link rel="stylesheet" href="global.css">
+<link rel="stylesheet" href="mural-topic.css">
+</head>
+<body>
+<div class="screen">
+
+  <div id="ruptura-banner" class="ruptura-banner"></div>
+
+  <div class="topbar">
+      <div class="brand">
+        <img src="coopsertaologo.jpeg" alt="Coopsertão">
+        VaiTopic!
+      </div>
+    </div>
+
+  <main>
+    <h1>Topic 02 · A bordo</h1>
+    <p class="lede">Você entrou via QR Code. Toque em um aviso para atualizar o mural da viagem!</p>
+
+    <!-- Grid de Informações Compacto -->
+    <div class="stat-grid">
+      <div class="stat"><div class="num">Ibaretama</div><div class="lbl">Próxima Parada</div></div>
+      <div class="stat"><div class="num">12 min</div><div class="lbl">Previsão de Chegada</div></div>
+      <div class="stat"><div class="num">3</div><div class="lbl">Vagas Sentadas</div></div>
+      <div class="stat"><div class="num">Sim</div><div class="lbl">Vagas em Pé</div></div>
+    </div>
+
+    <h2>Mural de Mensagens da Viagem</h2>
+    
+    <!-- CHAT CONTAINER: Onde as mensagens rolam internamente -->
+    <div class="chat-container" id="updates-list">
+      <div class="mensagem fixada">
+        <div class="mensagem-topo"><span>📢 Cobrador (Maria Lima)</span><span>Fixado</span></div>
+        <div class="mensagem-texto">Saindo de Quixadá agora. Próxima parada principal será Ibaretama.</div>
+        <div class="mensagem-hora">há 15 min</div>
+      </div>
+      <div class="mensagem">
+        <div class="mensagem-topo"><span>👤 Passageiro (Via QR Code)</span></div>
+        <div class="mensagem-texto">Está entrando agua da chuva dentro da topic.</div>
+        <div class="mensagem-hora">há 5 min</div>
+      </div>
+    </div>
+
+    <!-- PAINEL DE ENVIO: Onde o passageiro escolhe uma frase e envia -->
+    <div class="staff-panel show" style="display: block; border-color: #cbd5e1; background: #f8fafc;">
+      <div class="box-label">Selecione uma atualização para enviar</div>
+
+      <div class="phrase-grid">
+        <button class="phrase-btn" onclick="selectPhrase(this, 'Topic lotou! Sem vagas em pé.')">Topic lotou</button>
+        <button class="phrase-btn" onclick="selectPhrase(this, 'Ainda tem assento livre!')">Assento livre</button>
+        <button class="phrase-btn" onclick="selectPhrase(this, 'Está muito calor aqui!')">Muito calor</button>
+        <button class="phrase-btn" onclick="selectPhrase(this, 'O trânsito parou por aqui.')">Trânsito parado</button>
+        <button class="phrase-btn" onclick="selectPhrase(this, 'Há espaço em pé disponível!')">Há espaço em pé</button>
+      </div>
+
+      <!-- Botão de envio -->
+      <button class="btn btn-primary btn-block" onclick="sendPassengerUpdate()">Enviar ao Mural</button>
+      <div class="confirm-msg" id="passenger-confirm" style="color: #2455e8; font-weight: bold;">Sua contribuição foi enviada ao mural!</div>
+    </div>
+
+    <div class="nav-row">
+      <a class="btn" href="mural-principal.html">Mural Principal</a>
+    </div>
+  </main>
+</div>
+
+<script src="script.js"></script>
+<script>
+  let selectedPhrase = null;
+
+  function selectPhrase(btn, text) {
+    // Remove a seleção visual dos outros botões e aplica no atual
+    document.querySelectorAll('.phrase-btn').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+    selectedPhrase = text;
+  }
+
+  function sendPassengerUpdate() {
+    // Se clicar em enviar sem ter escolhido um botão antes
+    if (!selectedPhrase) { 
+      alert('Por favor, selecione uma das opções acima antes de enviar.'); 
+      return; 
+    }
+
+    // Cria o balão de mensagem padronizado
+    const item = document.createElement('div');
+    item.className = 'mensagem';
+    item.innerHTML = `
+      <div class="mensagem-topo"><span>👤 Passageiro (Via QR Code)</span></div>
+      <div class="mensagem-texto">${selectedPhrase}</div>
+      <div class="mensagem-hora">agora mesmo</div>
+    `;
+    
+    // Injeta no topo do chat do mural
+    document.getElementById('updates-list').prepend(item);
+
+    // Exibe a mensagem verde de sucesso
+    const confirm = document.getElementById('passenger-confirm');
+    confirm.classList.add('show');
+    setTimeout(() => confirm.classList.remove('show'), 2500);
+
+    // Limpa a seleção visual para o próximo envio
+    selectedPhrase = null;
+    document.querySelectorAll('.phrase-btn').forEach(b => b.classList.remove('selected'));
+  }
+</script>
+</body>
+</html>

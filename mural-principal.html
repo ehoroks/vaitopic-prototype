@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VaiTopic! — Mural Principal</title>
+
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="mural-principal.css">
+</head>
+
+<body>
+  <div class="screen">
+
+    <div id="ruptura-banner" class="ruptura-banner"></div>
+
+    <div class="topbar">
+      <div class="brand">
+        <img src="coopsertaologo.jpeg" alt="Coopsertão">
+        VaiTopic!
+      </div>
+    </div>
+
+    <main>
+      <h1>Avisos gerais</h1>
+      <p class="especificacao">Informações que valem pra todas as topics da rota, publicadas pelo fiscal/administrador.</p>
+
+      <div class="chat-container">
+
+        <div class="mensagem fixada">
+          <div class="mensagem-topo">
+            <span class="admin">Administrador</span>
+            <span class="pin">📌</span>
+          </div>
+          <div class="mensagem-texto">
+            Alteração de horário — feriado. Durante o feriado de Corpus Christi, as topics vão circular em horário reduzido.
+          </div>
+          <div class="mensagem-hora">
+            hoje, 07:10
+          </div>
+        </div>
+
+        <div class="mensagem">
+          <div class="mensagem-topo">
+            <span class="admin">Administrador</span>
+          </div>
+          <div class="mensagem-texto">
+            Trânsito intenso na BR-020. Trecho próximo a Ibaretama com lentidão. Atrasos de até 15 min são esperados.
+          </div>
+          <div class="mensagem-hora">
+            há 2h
+          </div>
+        </div>
+
+        <div class="mensagem">
+          <div class="mensagem-topo">
+            <span class="admin">Administrador</span>
+          </div>
+          <div class="mensagem-texto">
+            Topic das 13h cancelada. Cancelamento por problema mecânico. Próxima saída prevista pra 15h.
+          </div>
+          <div class="mensagem-hora">
+            há 5h
+          </div>
+        </div>
+
+        <div class="mensagem">
+          <div class="mensagem-topo">
+            <span class="admin">Administrador</span>
+          </div>
+          <div class="mensagem-texto">
+            Topic das 13h cancelada. Cancelamento por problema mecânico. Próxima saída prevista pra 15h.
+          </div>
+          <div class="mensagem-hora">
+            há 5h
+          </div>
+        </div>
+      </div>
+      <button class="demo-link" onclick="showRuptura('não foi possível carregar os avisos')">simular falha ao carregar avisos</button>
+
+      <div class="nav-row">
+        <a class="btn" href="index.html">Mapa</a>
+        <a class="btn" href="horarios.html">Horários</a>
+        <a class="btn" href="precos.html">Preços</a>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,131 @@
+/* Grid de Status */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;    
+}
+
+.stat {
+  background: #f4f4f4;
+  border: 1px solid #d4d4d4;
+  padding: 1px 2px;   
+  border-radius: 6px;
+  text-align: center;
+}
+
+.stat .num {
+  font-size: 0.9rem;  
+  font-weight: bold;
+  color: #222;
+  line-height: 1.2;
+}
+
+.stat .lbl {
+  font-size: 0.7rem; 
+  color: #6b6b6b;
+  text-transform: uppercase;
+  margin-top: 1px;
+}
+
+.chat-container {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 16px;
+  border: 1px dashed #d4d4d4;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+/* Estilo dos balões de chat */
+.mensagem {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.mensagem.fixada {
+  background: #fffbeb;
+  border-left: 4px solid #f59e0b;
+}
+.mensagem-topo {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: #1e293b;
+}
+.mensagem-texto {
+  font-size: 0.85rem;
+  color: #334155;
+}
+.mensagem-hora {
+  font-size: 0.7rem;
+  color: #94a3b8;
+  align-self: flex-end;
+}
+
+/* Painel expansível do Motorista/Cobrador */
+.staff-toggle {
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.staff-panel {
+  display: none;
+  background: #f9f9f9;
+  border: 1px dashed #222;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+}
+.staff-panel.show {
+  display: block;
+}
+.box-label {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.phrase-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.phrase-btn {
+  padding: 6px;
+  font-size: 0.75rem;
+  background: white;
+  border: 1px solid #d4d4d4;
+  cursor: pointer;
+}
+.phrase-btn.selected {
+  background: #222;
+  color: white;
+}
+#staff-text {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #222;
+  font-size: 0.85rem;
+}
+.confirm-msg {
+  display: none;
+  font-size: 0.8rem;
+  color: green;
+  margin-top: 6px;
+}
+.confirm-msg.show {
+  display: block;
+}

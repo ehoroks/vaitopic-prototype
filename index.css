@@ -1,0 +1,28 @@
+#map {
+  height: 370px;
+  width: 100%;
+  border: 1px solid #999999;
+}
+
+.map-caption {
+  font-size: 0.72rem;
+  color: #6b6b6b;
+  margin-bottom: 16px;
+}
+
+.popup-btn {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #2455e8;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.qr-note {
+  border: 2px dashed #ff0000;
+  padding: 10px 10px;
+  font-size: 0.8rem;
+  background: #d8abab;
+  margin: 16px 0;
+}
