@@ -54,6 +54,7 @@ main {
   padding: 5px 8px;
   margin-top: 8px;
 }
+
 .demo-link:hover {
   background: #cc9999;
 }
@@ -97,6 +98,7 @@ main {
   font-size: 1.05rem;
   letter-spacing: 0.02em;
 }
+
 .topbar .brand img {
   height: 35px;
   width: 130px;
@@ -171,4 +173,11 @@ p.lede {
 .nav-row .btn {
   flex: 1;
   min-width: 130px;
+}
+
+[vw] {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9999;
 }
