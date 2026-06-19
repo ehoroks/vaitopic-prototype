@@ -1,7 +1,11 @@
 #map {
-  height: 55vh;
   width: 100%;
-  border: 1px solid #999999;
+  height: 280px;        /* Define uma altura fixa excelente para telas de celular */
+  min-height: 280px;    /* Impede que o flexbox esmague o mapa */
+  border-radius: 12px;  /* Deixa as bordas arredondadas e elegantes */
+  border: 1px solid #d4d4d4;
+  margin: 10px 0;       /* Cria um espaçamento saudável acima e abaixo dele */
+  z-index: 1;           /* Garante que o Leaflet não cubra componentes nativos */
 }
 
 .map-caption {

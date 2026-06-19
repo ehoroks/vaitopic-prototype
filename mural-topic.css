@@ -21,13 +21,14 @@
 }
 
 .stat .lbl {
-  font-size: 0.7rem; 
+  font-size: 0.+rem; 
   color: #6b6b6b;
   text-transform: uppercase;
   margin-top: 1px;
 }
 
 .chat-container {
+  flex: 1;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -36,7 +37,6 @@
   border: 1px dashed #d4d4d4;
   padding: 8px;
   border-radius: 8px;
-  max-height: 180px;
 }
 
 /* Estilo dos balões de chat */
