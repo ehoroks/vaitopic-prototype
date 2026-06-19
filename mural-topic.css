@@ -21,14 +21,17 @@
 }
 
 .stat .lbl {
-  font-size: 0.+rem; 
+  font-size: 0.7rem; 
   color: #6b6b6b;
   text-transform: uppercase;
   margin-top: 1px;
 }
 
+main {
+  overflow-y: auto;
+}
+
 .chat-container {
-  flex: 1;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
@@ -37,6 +40,8 @@
   border: 1px dashed #d4d4d4;
   padding: 8px;
   border-radius: 8px;
+  min-height: 220px;
+  max-height: 320px;
 }
 
 /* Estilo dos balões de chat */
@@ -101,6 +106,8 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 6px;
   margin-bottom: 10px;
+  max-height: 90px;
+  overflow-y: auto;
 }
 .phrase-btn {
   padding: 6px;

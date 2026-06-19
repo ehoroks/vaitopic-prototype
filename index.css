@@ -1,17 +1,19 @@
 #map {
   width: 100%;
-  height: 280px;        /* Define uma altura fixa excelente para telas de celular */
-  min-height: 280px;    /* Impede que o flexbox esmague o mapa */
-  border-radius: 12px;  /* Deixa as bordas arredondadas e elegantes */
+  height: 220px;        /* Define uma altura fixa excelente para telas de celular */
+  min-height: 220px;    /* Impede que o flexbox esmague o mapa */
   border: 1px solid #d4d4d4;
   margin: 10px 0;       /* Cria um espaçamento saudável acima e abaixo dele */
-  z-index: 1;           /* Garante que o Leaflet não cubra componentes nativos */
 }
 
 .map-caption {
   font-size: 0.72rem;
   color: #6b6b6b;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
+}
+
+main {
+  overflow-y: auto;
 }
 
 .popup-btn {
