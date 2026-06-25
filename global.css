@@ -189,3 +189,7 @@ p.lede {
   right: 30px;
   z-index: 9999;
 }
+.btn.active {
+  background: #1f6feb;
+  color: white;
+}

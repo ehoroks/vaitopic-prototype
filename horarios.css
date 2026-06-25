@@ -38,3 +38,7 @@ table.wire tbody tr:nth-child(even) {
   color: #6b6b6b;
   margin-bottom: 16px;
 }
+#horarios {
+  background: #d6d6d6;
+  color: rgb(0, 0, 0);
+}

@@ -86,3 +86,8 @@ table.tabela-precos tbody tr:nth-child(even) {
 table.tabela-precos tbody tr:nth-child(odd) {
   background: #ffffff;
 }
+
+#precos {
+  background: #d6d6d6;
+  color: rgb(0, 0, 0);
+}

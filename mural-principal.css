@@ -40,3 +40,8 @@
   color: #555;
   align-self: flex-end;
 }
+
+#mural {
+  background: #d6d6d6;
+  color: rgb(0, 0, 0);
+}

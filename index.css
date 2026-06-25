@@ -31,4 +31,8 @@ main {
   font-size: 0.8rem;
   background: #d8abab;
   margin: 16px 0;
+} 
+#mapa {
+  background: #d6d6d6;
+  color: rgb(0, 0, 0);
 }
