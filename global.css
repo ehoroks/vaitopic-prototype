@@ -169,6 +169,15 @@ p.lede {
   border-top: 1px dashed #d4d4d4;
 }
 
+.bottom-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px dashed #d4d4d4;
+}
+
 .nav-row .btn {
   flex: 1;
   min-width: 130px;
